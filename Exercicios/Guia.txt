@@ -1,0 +1,2 @@
+do exercício 001 até o 015 se encontra o primeiro módulo do curso de HTML5 e CSS do Gustavo Guanabara.
+A partir do 016 começa o módulo 2.

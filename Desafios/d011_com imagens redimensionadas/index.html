@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio das Imagens</title>
+</head>
+<body>
+    <h1>Imagens Dimensionadas</h1>
+    <p>Diminua o tamanho do seu navegador</p>
+
+    <picture>
+
+        <source media="(max-width: 790px )" srcset="Imagens/P-430x480.jpg" type="image/jpg">
+
+        <source media="(max-width:1043px )" srcset="Imagens/P-775x517.jpg" type="image/jpg">
+
+        <img src="Imagens/P-1024x683.jpg" alt="Paisagem Grande">
+    </picture>
+</body>
+</html>
