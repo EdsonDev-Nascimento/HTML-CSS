@@ -4,19 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fundo fixo de tela</title>
     <style>
         body{
             height: 100vh;
+            /*
             background-color: black;
             background-image: url("imagens/wallpaper002.jpg");
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
+            background-attachment: fixed;*/
+
+            /* ShortHand - Background
+
+         color > image > position > repeat > [size]
+
+            */
+
+            /* OBS: APESAR DE NA REGRA DE CSS ESTAR DIZENDO QUE A CONFIGURAÇÃO "SIZE" PODE SER APLICADA JUNTO NO SHORTHAND DE BACKGROUND, INFELIZMENTE NA PRÁTICA *AINDA* N ESTÁ FUNCIONANDO.*/
+
+            background: black url("imagens/wallpaper002.jpg")  center center no-repeat fixed;
+            background-size: cover;
         }
         main{
             background-color: white;
-            width: 400px;
+            max-width: 400px;
             padding: 10px;
             margin: auto;
             border: 1px solid darkblue;
@@ -27,7 +40,13 @@
 <body>
     <main>
         <h1>Teste de Imagem de Fundo</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iure doloribus possimus commodi quibusdam, id ex recusandae expedita impedit officia asperiores consequuntur qui velit in laborum architecto quam nihil esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab molestias vel veniam nam, reprehenderit nulla ad sapiente, voluptas cumque provident laudantium porro repudiandae nihil consectetur magni blanditiis laborum voluptates perferendis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati error quae officia, numquam facere itaque sed eos iste earum dicta, enim quod cum nobis, quos aliquid! Ducimus eum commodi pariatur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iure doloribus possimus commodi quibusdam, id ex recusandae expedita impedit officia asperiores consequuntur qui velit in laborum architecto quam nihil esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab molestias vel veniam nam, reprehenderit nulla ad sapiente, voluptas cumque provident laudantium porro repudiandae nihil consectetur magni blanditiis laborum voluptates perferendis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati error quae officia, numquam facere itaque sed eos iste earum dicta, enim quod cum nobis, quos aliquid! Ducimus eum commodi pariatur?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam vel veritatis possimus, molestias debitis ut perspiciatis deserunt sequi eos corporis quas a dolorem, nulla doloremque ex corrupti? Quas, voluptatem sint? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ducimus minus soluta cupiditate doloremque magnam debitis, totam magni laborum hic accusantium itaque voluptatum nobis sapiente reprehenderit, consectetur officia repudiandae similique. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi libero a maxime illo consequatur corrupti neque vitae eveniet alias accusamus voluptatibus, odit, autem veritatis repellat nesciunt? Unde, sit at? Odit?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iure doloribus possimus commodi quibusdam, id ex recusandae expedita impedit officia asperiores consequuntur qui velit in laborum architecto quam nihil esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab molestias vel veniam nam, reprehenderit nulla ad sapiente, voluptas cumque provident laudantium porro repudiandae nihil consectetur magni blanditiis laborum voluptates perferendis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati error quae officia, numquam facere itaque sed eos iste earum dicta, enim quod cum nobis, quos aliquid! Ducimus eum commodi pariatur?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam vel veritatis possimus, molestias debitis ut perspiciatis deserunt sequi eos corporis quas a dolorem, nulla doloremque ex corrupti? Quas, voluptatem sint? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ducimus minus soluta cupiditate doloremque magnam debitis, totam magni laborum hic accusantium itaque voluptatum nobis sapiente reprehenderit, consectetur officia repudiandae similique. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi libero a maxime illo consequatur corrupti neque vitae eveniet alias accusamus voluptatibus, odit, autem veritatis repellat nesciunt? Unde, sit at? Odit?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iure doloribus possimus commodi quibusdam, id ex recusandae expedita impedit officia asperiores consequuntur qui velit in laborum architecto quam nihil esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab molestias vel veniam nam, reprehenderit nulla ad sapiente, voluptas cumque provident laudantium porro repudiandae nihil consectetur magni blanditiis laborum voluptates perferendis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati error quae officia, numquam facere itaque sed eos iste earum dicta, enim quod cum nobis, quos aliquid! Ducimus eum commodi pariatur?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam vel veritatis possimus, molestias debitis ut perspiciatis deserunt sequi eos corporis quas a dolorem, nulla doloremque ex corrupti? Quas, voluptatem sint? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ducimus minus soluta cupiditate doloremque magnam debitis, totam magni laborum hic accusantium itaque voluptatum nobis sapiente reprehenderit, consectetur officia repudiandae similique. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi libero a maxime illo consequatur corrupti neque vitae eveniet alias accusamus voluptatibus, odit, autem veritatis repellat nesciunt? Unde, sit at? Odit?
+        </p>
     </main>
 </body>
 </html>
