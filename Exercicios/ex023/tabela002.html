@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table{
+            width: 400px;
+            border-collapse: collapse;
+            position: relative;
+        }
+
+        /*Usado para manter o titulo da tabela, o position: sticky deixa o titulo colado, em junção com o top: -1px diz para ela ficar colada no top da pagina, em cima*/
+        thead >tr >th{
+            position: sticky;
+            top: -1px;
+            background-color: darkblue;
+        }
+
+        td, th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        caption{
+            font-size: 1em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgrey;
+        }
+
+        thead, tfoot{
+            background-color: darkblue;
+            color: white;
+        }
+
+        /*a pseudo-classe abaixo serve para fazer essas configurações de efeito zebrado por exemplo, mas você também pode adicionar mais configurações, não é limitado somente ao zebrado*/
+        tbody >tr:nth-child(odd){ /*2n-1*/
+            background-color:white;
+        }
+        tbody > tr:nth-child(even){/*2n*/
+            background-color: lightgray;
+        }
+
+        td.num{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+
+    <!--
+    anatomia para tabelas grandes
+
+        Table
+            CAPTION
+            Thead
+                tr, td th
+            Tbody
+                tr, td, th
+            Tfoot
+                tr, td, th
+    -->
+<table>
+    <caption>População das unidades federativas</caption>
+    <thead>
+        <tr>
+            <!--A utilização do scope="col" quer dizer que os dados relacionados a esse titulo estão na mesma coluna, ou seja, embaixo-->
+            <th scope="col">Estado</th>
+            <th scope="col" style="width:10%;">População</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>São Paulo</td>
+            <td class="num">45 919 124</td>
+        </tr>
+        <tr>
+            <td>Minas Gerais</td>
+            <td class="num">21 158 791</td>
+        </tr>
+        <tr>
+            <td>Rio de Janeiro</td>
+            <td class="num">17 264 943</td>
+        </tr>
+        <tr>
+            <td>Bahia</td>
+            <td class="num">14 016 906</td>
+        </tr>
+        <tr>
+            <td>Paraná</td>
+            <td class="num">10 444 526</td>
+        </tr>
+        <tr>
+            <td>Rio Grande do Sul</td>
+            <td class="num">10 693 929</td>
+        </tr>
+        <tr>
+            <td> Pernambuco</td>
+            <td class="num">8 796 448</td>
+        </tr>
+        <tr>
+            <td>Ceará</td>
+            <td class="num">8 452 381	</td>
+        </tr>
+        <tr>
+            <td>Pará</td>
+            <td class="num">7 581 051</td>
+        </tr>
+        <tr>
+            <td>Santa Catarina</td>
+            <td class="num">6 248 436</td>
+        </tr>
+        <tr>
+            <td>Goiás</td>
+            <td class="num">6 003 788</td>
+        </tr>
+        <tr>
+            <td>Maranhão</td>
+            <td class="num">6 574 789</td>
+        </tr>
+        <tr>
+            <td>Amazonas</td>
+            <td class="num">3 483 985</td>
+        </tr>
+        <tr>
+            <td>Espírito Santo</td>
+            <td class="num">3 514 952</td>
+        </tr>
+        <tr>
+            <td>Paraíba</td>
+            <td class="num">3 766 528</td>
+        </tr>
+        <tr>
+            <td>Mato Grosso</td>
+            <td class="num">3 035 122</td>
+        </tr>
+        <tr>
+            <td>Rio Grande do Norte</td>
+            <td class="num">3 168 027</td>
+        </tr>
+        <tr>
+            <td>Alagoas</td>
+            <td class="num">3 120 494</td>
+        </tr>
+        <tr>
+            <td>Piauí</td>
+            <td class="num">3 118 360</td>
+        </tr>
+        <tr>
+            <td>Distrito Federal</td>
+            <td class="num">2 570 160</td>
+        </tr>
+        <tr>
+            <td>Mato Grosso do Sul</td>
+            <td class="num">2 449 024</td>
+        </tr>
+        <tr>
+            <td>Sergipe</td>
+            <td class="num"></td>
+        </tr>
+        <tr>
+            <td>Rondônia</td>
+            <td class="num">1 562 409</td>
+        </tr>
+        <tr>
+            <td>Tocantins</td>
+            <td class="num">1 383 445</td>
+        </tr>
+        <tr>
+            <td>Acre</td>
+            <td class="num">733 559</td>
+        </tr>
+        <tr>
+            <td>Amapá</td>
+            <td class="num">669 526</td>
+        </tr>
+        <tr>
+            <td>Roraima</td>
+            <td class="num">450 479</td>
+        </tr>
+
+    </tbody>
+    <tfoot>
+        <tr>
+            <!--Já o row, como o próprio nome sugere, quer dizer q o dado desse titulo está na mesma linha, diferente do col que quer dizer na mesma coluna(abaixo)-->
+            <th scope="row">Total de Habitantes</th>
+            <td class="num"><strong>210.147.125</strong></td>
+        </tr>
+    </tfoot>
+</table>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur quisquam, a rerum modi suscipit illum? Dicta quia quidem, corrupti, commodi necessitatibus expedita quas id, debitis at temporibus a fugiat aut? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea perspiciatis fuga totam mollitia quo quidem, vero, officia quos suscipit, deserunt asperiores consequatur maiores fugit obcaecati fugiat nam veritatis quod nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. In maiores sit laboriosam repellendus eius nulla dignissimos, velit facilis fugiat deserunt! Quo commodi hic explicabo, fuga alias saepe reiciendis quam maxime.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur quisquam, a rerum modi suscipit illum? Dicta quia quidem, corrupti, commodi necessitatibus expedita quas id, debitis at temporibus a fugiat aut? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea perspiciatis fuga totam mollitia quo quidem, vero, officia quos suscipit, deserunt asperiores consequatur maiores fugit obcaecati fugiat nam veritatis quod nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. In maiores sit laboriosam repellendus eius nulla dignissimos, velit facilis fugiat deserunt! Quo commodi hic explicabo, fuga alias saepe reiciendis quam maxime.
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur quisquam, a rerum modi suscipit illum? Dicta quia quidem, corrupti, commodi necessitatibus expedita quas id, debitis at temporibus a fugiat aut? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea perspiciatis fuga totam mollitia quo quidem, vero, officia quos suscipit, deserunt asperiores consequatur maiores fugit obcaecati fugiat nam veritatis quod nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. In maiores sit laboriosam repellendus eius nulla dignissimos, velit facilis fugiat deserunt! Quo commodi hic explicabo, fuga alias saepe reiciendis quam maxime.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur quisquam, a rerum modi suscipit illum? Dicta quia quidem, corrupti, commodi necessitatibus expedita quas id, debitis at temporibus a fugiat aut? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea perspiciatis fuga totam mollitia quo quidem, vero, officia quos suscipit, deserunt asperiores consequatur maiores fugit obcaecati fugiat nam veritatis quod nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. In maiores sit laboriosam repellendus eius nulla dignissimos, velit facilis fugiat deserunt! Quo commodi hic explicabo, fuga alias saepe reiciendis quam maxime.
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur quisquam, a rerum modi suscipit illum? Dicta quia quidem, corrupti, commodi necessitatibus expedita quas id, debitis at temporibus a fugiat aut? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea perspiciatis fuga totam mollitia quo quidem, vero, officia quos suscipit, deserunt asperiores consequatur maiores fugit obcaecati fugiat nam veritatis quod nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. In maiores sit laboriosam repellendus eius nulla dignissimos, velit facilis fugiat deserunt! Quo commodi hic explicabo, fuga alias saepe reiciendis quam maxime.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur quisquam, a rerum modi suscipit illum? Dicta quia quidem, corrupti, commodi necessitatibus expedita quas id, debitis at temporibus a fugiat aut? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea perspiciatis fuga totam mollitia quo quidem, vero, officia quos suscipit, deserunt asperiores consequatur maiores fugit obcaecati fugiat nam veritatis quod nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. In maiores sit laboriosam repellendus eius nulla dignissimos, velit facilis fugiat deserunt! Quo commodi hic explicabo, fuga alias saepe reiciendis quam maxime.
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur quisquam, a rerum modi suscipit illum? Dicta quia quidem, corrupti, commodi necessitatibus expedita quas id, debitis at temporibus a fugiat aut? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea perspiciatis fuga totam mollitia quo quidem, vero, officia quos suscipit, deserunt asperiores consequatur maiores fugit obcaecati fugiat nam veritatis quod nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. In maiores sit laboriosam repellendus eius nulla dignissimos, velit facilis fugiat deserunt! Quo commodi hic explicabo, fuga alias saepe reiciendis quam maxime.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur quisquam, a rerum modi suscipit illum? Dicta quia quidem, corrupti, commodi necessitatibus expedita quas id, debitis at temporibus a fugiat aut? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea perspiciatis fuga totam mollitia quo quidem, vero, officia quos suscipit, deserunt asperiores consequatur maiores fugit obcaecati fugiat nam veritatis quod nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. In maiores sit laboriosam repellendus eius nulla dignissimos, velit facilis fugiat deserunt! Quo commodi hic explicabo, fuga alias saepe reiciendis quam maxime.
+    </p>
+</body>
+</html>
